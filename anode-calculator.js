@@ -1,10 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var calculateButton = document.getElementById('calculateButton');
-  if (calculateButton) {
-    calculateButton.addEventListener('click', calculateAnodes);
-  }
-});
-
 function calculateAnodes() {
   // Get input values
   var boatMaterial = document.getElementById("boatMaterial").value;
@@ -47,6 +40,10 @@ function calculateAnodes() {
     minAnodeWeight = "N/A";
     maxAnodeWeight = "N/A";
   }
+
+  // Adjust the recommended anode weight based on the current anodes weight
+  minAnodeWeight -= currentAnodesWeight;
+  maxAnodeWeight -= currentAnodesWeight;
 
   // Determine recommended anode material based on water type
   var recommendedAnodeMaterial = '';

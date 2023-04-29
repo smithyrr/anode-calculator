@@ -16,10 +16,13 @@ function anode_calculator_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'anode_calculator_enqueue_scripts');
 
 
+
+
 function anode_calculator_shortcode() {
     ob_start();
     ?>
     <div>
+        <div class="anode-calculator-container">
         <label for="boatMaterial">Boat Material:</label>
         <select id="boatMaterial">
             <option value="fiberglass">Fiberglass</option>
@@ -31,10 +34,10 @@ function anode_calculator_shortcode() {
         <label for="boatLength">Boat Length:</label>
         <input type="number" id="boatLength" step="0.01" required>
         <br>
-        <label for="boatWidth">Boat Width:</label>
+        <label for="boatWidth">Boat Beam:</label>
         <input type="number" id="boatWidth" step="0.01" required>
         <br>
-        <label for="boatDepth">Boat Depth:</label>
+        <label for="boatDepth">Boat Draft:</label>
         <input type="number" id="boatDepth" step="0.01" required>
         <br>
         <label for="waterType">Water Type:</label>
