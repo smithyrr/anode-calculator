@@ -28,7 +28,7 @@ Please note that the figures provided are for a 2-year scheme, but most boat own
 
 ## Installation
 
-1. Download the `anode-calculator.zip` file.
+1. Download the zip https://github.com/smithyrr/anode-calculator.
 2. Log in to your WordPress dashboard and navigate to "Plugins" > "Add New" > "Upload Plugin".
 3. Click on "Choose File" and select the `anode-calculator.zip` file, then click "Install Now".
 4. After the plugin is installed, click "Activate Plugin" to enable it on your WordPress site.
