@@ -1,6 +1,23 @@
 # Anode Calculator Plugin for WordPress
 
-Anode Calculator is a simple WordPress plugin that allows users to calculate the recommended anode weight and material based on their boat's dimensions and water type. It's easy to use and integrates seamlessly with any WordPress theme.
+This plugin adds a simple anode calculator to your WordPress site. The calculator determines the required anode weight and recommended anode material based on the boat's dimensions and water type.
+
+## Disclaimer
+
+The formula used to calculate the required anode weight and material is based on the manufacturer's table and information provided on [The Fit Out Pontoon website](https://www.thefitoutpontoon.co.uk/electrics/anodes/). The table shows the weight of magnesium required to cover a certain surface area of steel:
+
+- up to 28m² = 4.5kg-9kg
+- 28.1m² to 42m² = 11kg-13kg
+- 42.1m² to 56m² = 14kg-20kg
+- 56.1m² to 70m² = 21kg-26kg
+
+To calculate the required anode weight, the surface area of the underwater portion of both hull sides plus the area of the base plate in m² should be considered. Anodes are typically sold by weight in common sizes such as 1.5kg, 2.5kg, and 3.5kg ingots. Smaller sizes are also available.
+
+Please note that the figures provided are for a 2-year scheme, but most boat owners may follow a 3-year plan of inspection and replacement.
+
+
+
+
 
 ## Features
 
