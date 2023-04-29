@@ -1,4 +1,10 @@
-  GNU nano 6.2                                                                                                                       anode-calculator.js *                                                                                                                              l<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var calculateButton = document.getElementById('calculateButton');
+  if (calculateButton) {
+    calculateButton.addEventListener('click', calculateAnodes);
+  }
+});
+
 function calculateAnodes() {
   // Get input values
   var boatMaterial = document.getElementById("boatMaterial").value;
@@ -47,8 +53,3 @@ function calculateAnodes() {
   // Display the result and anode material recommendation
   document.getElementById("result").innerHTML = "Underwater Surface Area: " + underwaterSurfaceArea.toFixed(2) + " m²<br>Recommended Anode Weight: " + minAnodeWeight + " kg - " + maxAnodeWeight + " kg<br>Recommended Anode Material: " + recommendedAnodeMaterial;
 }
-</script>
-
-
-
-
