@@ -25,22 +25,31 @@ function calculateAnodes() {
   // Calculate the underwater surface area
   var underwaterSurfaceArea = (boatLength * boatDepth * 2) + (boatLength * boatWidth);
 
-  // Calculate anode requirements based on the table provided
-  var minAnodeWeight, maxAnodeWeight;
 
-  if (underwaterSurfaceArea <= 28) {
-    minAnodeWeight = 4.5;
-    maxAnodeWeight = 9;
-  } else if (underwaterSurfaceArea > 28 && underwaterSurfaceArea <= 42) {
-    minAnodeWeight = 11;
-    maxAnodeWeight = 13;
-  } else if (underwaterSurfaceArea > 42 && underwaterSurfaceArea <= 56) {
-    minAnodeWeight = 14;
-    maxAnodeWeight = 20;
-  } else if (underwaterSurfaceArea > 56 && underwaterSurfaceArea <= 70) {
-    minAnodeWeight = 21;
-    maxAnodeWeight = 26;
-  }
+// Calculate anode requirements based on the table provided
+var minAnodeWeight, maxAnodeWeight;
+
+if (underwaterSurfaceArea <= 28) {
+  minAnodeWeight = 4.5;
+  maxAnodeWeight = 9;
+} else if (underwaterSurfaceArea > 28 && underwaterSurfaceArea <= 42) {
+  minAnodeWeight = 11;
+  maxAnodeWeight = 13;
+} else if (underwaterSurfaceArea > 42 && underwaterSurfaceArea <= 56) {
+  minAnodeWeight = 14;
+  maxAnodeWeight = 20;
+} else if (underwaterSurfaceArea > 56 && underwaterSurfaceArea <= 70) {
+  minAnodeWeight = 21;
+  maxAnodeWeight = 26;
+} else if (underwaterSurfaceArea > 70 && underwaterSurfaceArea <= 112) {
+  minAnodeWeight = 27;
+  maxAnodeWeight = 35;
+} else {
+  minAnodeWeight = "N/A";
+  maxAnodeWeight = "N/A";
+}
+// ...
+
 
   // Determine recommended anode material based on water type
   var recommendedAnodeMaterial = '';
