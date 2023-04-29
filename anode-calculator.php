@@ -11,8 +11,10 @@ License: GPL2
 
 function anode_calculator_enqueue_scripts() {
     wp_enqueue_script('anode-calculator-js', plugins_url('anode-calculator.js', __FILE__), array('jquery'), '1.0', true);
+    wp_enqueue_style('anode-calculator-css', plugins_url('anode-calculator.css', __FILE__));
 }
 add_action('wp_enqueue_scripts', 'anode_calculator_enqueue_scripts');
+
 
 function anode_calculator_shortcode() {
     ob_start();
@@ -42,7 +44,7 @@ function anode_calculator_shortcode() {
             <option value="brackish">Brackish</option>
         </select>
         <br>
-        <label for="currentAnodesWeight">Current Anodes Weight:</label>
+        <label for="currentAnodesWeight">Current Anodes Weight (KG):</label>
         <input type="number" id="currentAnodesWeight" step="0.01" required>
         <br>
         <label for="unit">Unit:</label>
